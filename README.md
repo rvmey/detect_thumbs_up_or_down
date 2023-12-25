@@ -15,3 +15,11 @@ pip install requests
 ## Run it like this:
 
     python3 detect_thumb_up_or_down.py
+
+## See it in action here:
+
+[![Watch the video](https://img.youtube.com/vi/70RW8wRU7kg/default.jpg)](https://youtu.be/70RW8wRU7kg)
+
+## Forum post:
+
+https://www.triggercmd.com/forum/topic/2776/trigger-commands-with-vision-python-script
