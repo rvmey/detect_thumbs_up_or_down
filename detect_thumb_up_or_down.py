@@ -3,8 +3,6 @@ import mediapipe as mp  # Prereq:  pip install mediapipe
 import requests         # Prereq:  pip install requests
 import os
 
-# Get environment variables
-
 # You have options for how to set triggercmd_token.  Keep it secret.
 # triggercmd_token = os.getenv('TRIGGERCMD_TOKEN')
 # triggercmd_token = <This is your token from the Instructions page. >
