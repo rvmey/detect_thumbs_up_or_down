@@ -13,8 +13,6 @@ with open(file_path, 'r') as file:
     triggercmd_token = file.read()
 
 def trigger_cmd(direction):
-    print(direction)
-
     # This will trigger a command on one of your computers via TRIGGERcmd.
     # The command will run with thumb direction the last parameter.
     url = "https://www.triggercmd.com/api/run/trigger"
@@ -59,7 +57,7 @@ def detect_thumbs_direction(frame):
 
 def main():
     cap = cv2.VideoCapture(0)  # Use 0 for the default camera
-    previous_thumbs_direction_default = "Not Detected"
+    previous_thumbs_direction = "Not Detected"
 
     while cap.isOpened():
         ret, frame = cap.read()
@@ -73,10 +71,15 @@ def main():
         thumbs_direction = detect_thumbs_direction(frame)
 
         # Compare previous thumbs direction to current
-        if (previous_thumbs_direction_default == thumbs_direction):
+        if (previous_thumbs_direction == thumbs_direction):
             pass
         else:
-            if previous_thumbs_direction_default == "Not Detected":
+            previous_thumbs_direction = thumbs_direction
+            print(thumbs_direction)
+
+            if previous_thumbs_direction == "Not Detected":
+                pass
+            else:
                 trigger_cmd(thumbs_direction)
 
         # Display the result on the frame
