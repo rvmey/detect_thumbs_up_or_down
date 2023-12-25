@@ -6,10 +6,12 @@ The command will be triggered via TRIGGERcmd.com, and the parameter of the comma
 
 ## Prereq's:
 
+```
 pip install opencv-python
 pip install mediapipe
 pip install requests
+```
 
 ## Run it like this:
 
-python3 detect_thumb_up_or_down.py
+    python3 detect_thumb_up_or_down.py
