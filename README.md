@@ -1,4 +1,4 @@
-# detect_thumbs_up_or_down
+# Detect thumbs up or down with computer vision, and trigger a command on a remote computer via TRIGGERcmd with Up or Down as the parameter 
 
 This script will trigger a command on one of your computers when your camera detects a thumbs up or down.  
 
