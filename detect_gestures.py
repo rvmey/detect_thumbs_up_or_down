@@ -51,10 +51,9 @@ def trigger_cmd(gesture):
     r = requests.post(url, headers=headers, json=json)
 
 def main():
-    previous_gesture = "None"
+    # cap = cv2.VideoCapture("rtsp://admin:password@192.168.1.2:554/cam/realmonitor?channel=1&subtype=0")
     cap = cv2.VideoCapture(0)
-    # mp_hands = mp.solutions.hands
-    # hands = mp_hands.Hands()
+    previous_gesture = "None"
 
     # Create an GestureRecognizer object.
     base_options = python.BaseOptions(model_asset_path='./gesture_recognizer.task')

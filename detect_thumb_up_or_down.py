@@ -56,6 +56,7 @@ def detect_thumbs_direction(frame):
     return "Not Detected"
 
 def main():
+    # cap = cv2.VideoCapture("rtsp://admin:password@192.168.1.2:554/cam/realmonitor?channel=1&subtype=0")
     cap = cv2.VideoCapture(0)  # Use 0 for the default camera
     previous_thumbs_direction = "Not Detected"
 
