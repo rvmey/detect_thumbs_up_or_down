@@ -5,6 +5,9 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 import time
 
+debounce_timeout = 5        # Don't trigger the command any more than once per 5 seconds. 
+confidence_threshold = .7   # Be 70 percent confident you see the gesture.
+
 def debounce(timeout=5):
     def decorator(func):
         last_call = 0
@@ -31,7 +34,7 @@ file_path = os.path.expanduser(os.path.join('~', ".TRIGGERcmdData", file_name))
 with open(file_path, 'r') as file:
     triggercmd_token = file.read()
 
-@debounce(timeout=2)
+@debounce(timeout=debounce_timeout)
 def trigger_cmd(gesture):
     print("Running command with parameter: " + gesture)
     # This will trigger a command on one of your computers via TRIGGERcmd.
@@ -74,7 +77,7 @@ def main():
         recognition_result = recognizer.recognize(mp_image)
         if(len(recognition_result.gestures) > 0):
             top_gesture = recognition_result.gestures[0][0]
-            if(top_gesture.score > .4):
+            if(top_gesture.score > confidence_threshold):
                 gesture = str(top_gesture.category_name)
 
         if (gesture != "None"):

@@ -26,7 +26,7 @@ https://www.triggercmd.com/forum/topic/2776/trigger-commands-with-vision-python-
 
 ## New and improved version:
 
-detect_gestures.py uses MediaPipe's hand gesture recognition to recognize 7 different gestures, and it prevents your command from running more than once every 2 seconds.  
+detect_gestures.py uses MediaPipe's hand gesture recognition to recognize 7 different gestures, and it prevents your command from running more than once every 5 seconds.  
 
 - Closed Fist
 - Open Palm
