@@ -23,3 +23,18 @@ pip install requests
 ## Forum post:
 
 https://www.triggercmd.com/forum/topic/2776/trigger-commands-with-vision-python-script
+
+## New and improved version:
+
+detect_gestures.py uses MediaPipe's hand gesture recognition to recognize 7 different gestures, and it prevents your command from running more than once every 2 seconds.  
+
+- Closed Fist
+- Open Palm
+- Pointing Up
+- Thumbs Down
+- Thumbs Up
+- Victory
+- I Love You
+
+See this for details:
+https://developers.google.com/mediapipe/solutions/vision/gesture_recognizer/python
